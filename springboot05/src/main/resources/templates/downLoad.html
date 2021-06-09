@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>下载文件</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td>picture.txt</td>
+        <td><a th:href="@{/download(filename='picture.txt')}">下载</a></td>
+    </tr>
+    <tr>
+        <td>自然语言处理.pdf</td>
+        <td><a th:href="@{/download(filename='自然语言处理.pdf')}">下载</a></td>
+    </tr>
+</table>
+</body>
+</html>

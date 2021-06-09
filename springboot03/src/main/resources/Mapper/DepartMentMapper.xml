@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper  namespace="com.tianxinag.springboot03.mapper.DepartMentMapper">
+
+
+    <resultMap id="ed" type="com.tianxinag.springboot03.Beans.Department">
+
+        <id property="id" column="d_Id"></id>
+        <result property="dept_name" column="dept_name"></result>
+            <collection property="employees" ofType="com.tianxinag.springboot03.Beans.Employee">
+                <id property="id" column="id"></id>
+                <result property="last_name" column="last_name"></result>
+                <result property="gender" column="gender"></result>
+                <result property="email" column="email"></result>
+                <result property="d_id" column="d_id"></result>
+            </collection>
+    </resultMap>
+
+
+<!--     public Department getDepartById();-->
+    <select id="getDepartById" resultMap="ed" parameterType="int">
+        select d.id d_Id,d.dept_name,e.* from tbl_employee e,tbl_dept d where e.d_id and d.id=#{id}
+    </select>
+</mapper>

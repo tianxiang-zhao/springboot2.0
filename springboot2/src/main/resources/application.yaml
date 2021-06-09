@@ -1,0 +1,31 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /springboot002
+
+#value值为数组或者单列集合
+
+  #  hobby:
+  #    -play
+  #    -read
+  #    -sleep
+  #方式二  hobby: [play,read,sleep]
+
+#当值为map时
+#    k1:v1
+#    k2:v2
+#方式二
+#  map:{k1:v1,k2,v2}
+
+person:
+  id: 10
+  name: Tomcat
+  famliy-numbers: [father,mather]
+  pet: {type:cat,name:tom}
+  hobby: [play,read,sleep]
+  map: {k1:v1,k2:v2}
+
+
+user:
+  email: tianxiang@qq.com
+
